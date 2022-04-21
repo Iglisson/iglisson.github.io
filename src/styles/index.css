@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,800;1,400&display=swap');
+
+/* CDN dos Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-icons {
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.container-icons i {
+    color: #000;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.container-icons i:hover{
+    transition: 0.7s;
+    transform: scale(1.07);
+}
+
+.container-info {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-info img {
+    width: 11vw;
+    height: 11vw;
+    border-radius: 50%;
+    margin-top: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.container-info h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.container-projects {
+    width: 50vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.container-projects h2 {
+    font-size: 2rem;
+}
+
+.container-projects a {
+    color: #000;
+    text-decoration: none;
+}
+
+.container-projects a:hover{
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .container-icons {
+        width: 100%;
+    }
+
+    .container-info {
+        width: 100%;
+    }
+
+    .container-info img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .container-projects {
+        width: 90%;
+        height: calc(width/3/2 );
+    }
+}
