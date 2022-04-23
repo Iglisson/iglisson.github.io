@@ -93,7 +93,6 @@ body {
 }
 
 .container-projects .project-buttons {
-    /* position: absolute; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -107,6 +106,12 @@ body {
     border: 0;
     background: none;
     margin: 10px;
+    cursor: pointer;
+}
+
+.container-projects .project-buttons button i:hover {
+    transition: all 0.5s;
+    transform: scale(1.07);
 }
 
 .container-projects .project-info {
