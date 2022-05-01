@@ -16,6 +16,11 @@ const projects = [
         "img": "./src/images/projects/tip-calculator.png",
         "title": "Tip Calculator",
         "url_online": "https://iglisson.github.io/tip-calculator-js/"
+    },
+    {
+        "img": "./src/images/projects/clone-prime-video.png",
+        "title": "Clone Prime Video",
+        "url_online": "https://iglisson.github.io/clone-prime-video/"
     }
 ];
 
