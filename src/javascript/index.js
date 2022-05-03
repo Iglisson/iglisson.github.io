@@ -1,28 +1,9 @@
 'use strict';
 
+import projects from "./projects.js";
+
 let projectIndex = 0;
-const projects = [
-    {
-        "img": "./src/images/projects/stopwatch.png",
-        "title": "Stopwatch",
-        "url_online": "https://iglisson.github.io/stopwatch/"
-    },
-    {
-        "img": "./src/images/projects/guessing-game.png",
-        "title": "Guessing Game",
-        "url_online": "https://iglisson.github.io/guessing-game-js/"
-    },
-    {
-        "img": "./src/images/projects/tip-calculator.png",
-        "title": "Tip Calculator",
-        "url_online": "https://iglisson.github.io/tip-calculator-js/"
-    },
-    {
-        "img": "./src/images/projects/clone-prime-video.png",
-        "title": "Clone Prime Video",
-        "url_online": "https://iglisson.github.io/clone-prime-video/"
-    }
-];
+const buttonsNavigation = document.querySelectorAll(".project-buttons button");
 
 document.querySelector("#email").addEventListener("click", () => {
     navigator.clipboard.writeText("iglioliveira87@outlook.com");
@@ -34,56 +15,14 @@ document.querySelector("#discord").addEventListener("click", () => {
     alert("Discord copiado com sucesso!");
 });
 
-function writeProject(index){
-    const container = document.querySelector(".container-projects");
-    container.innerHTML = "";
-    const imageContainer = document.createElement("div");
-    const infoContainer = document.createElement("div");
-    const btnContainer = document.createElement("div");
-    const image = document.createElement("img");
-    const title = document.createElement("h2");
-    const url_online = document.createElement("a");
-    const btnNext = document.createElement("button");
-    const btnBack = document.createElement("button");
-    const iconNext = document.createElement("i");
-    const iconBack = document.createElement("i");
-
-    imageContainer.className = "project-image";
-    image.src = projects[index].img;
-    image.alt = "Project image: " + projects[index].title;
-    imageContainer.appendChild(image);
-
-    btnContainer.className = "project-buttons";
-    iconNext.className = "fas fa-arrow-circle-right";
-    iconBack.className = "fas fa-arrow-circle-left";
-    btnNext.appendChild(iconNext);
-    btnNext.addEventListener("click", () => {
-        next();
-        writeProject(projectIndex);
-    });
-    btnBack.appendChild(iconBack);
-    btnBack.addEventListener("click", () => {
-        back();
-        writeProject(projectIndex);
-    });
-    btnContainer.appendChild(btnBack);
-    btnContainer.appendChild(btnNext);
-
-    infoContainer.className = "project-info";
-    title.textContent = projects[index].title;
-    infoContainer.appendChild(title);
-    infoContainer.appendChild(btnContainer);
-    url_online.href = projects[index].url_online;
-    url_online.textContent = "Teste aqui...";
-    url_online.target = "_blank";
-    infoContainer.appendChild(url_online);
-
-    container.appendChild(imageContainer);
-    container.appendChild(infoContainer);
+function showProject(index) {
+    document.querySelector(".project-image img").src = projects[index].img;
+    document.querySelector(".project-info h2").textContent = projects[index].title;
+    document.querySelector(".project-info a").href = projects[index].url_online;
 };
 
-function next(){
-    if (projectIndex == projects.length-1) {
+function next() {
+    if (projectIndex == projects.length - 1) {
         projectIndex = 0;
     } else {
         projectIndex++;
@@ -92,10 +31,20 @@ function next(){
 
 function back() {
     if (projectIndex == 0) {
-        projectIndex = projects.length-1;
+        projectIndex = projects.length - 1;
     } else {
         projectIndex--;
     }
 }
 
-window.onload = writeProject(projectIndex);
+buttonsNavigation[0].addEventListener("click", () => {
+    back();
+    showProject(projectIndex);
+});
+
+buttonsNavigation[1].addEventListener("click", () => {
+    next();
+    showProject(projectIndex);
+});
+
+window.onload = showProject(projectIndex);
