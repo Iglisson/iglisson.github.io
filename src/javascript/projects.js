@@ -18,6 +18,11 @@ const projects =[
         "img": "./src/images/projects/clone-prime-video.png",
         "title": "Clone Prime Video",
         "url_online": "https://iglisson.github.io/clone-prime-video/"
+    },
+    {
+        "img": "./src/images/projects/todo-list.png",
+        "title": "To Do List",
+        "url_online": "https://iglisson.github.io/todo-list/"
     }
 ]
 
