@@ -1,50 +1,65 @@
 'use strict';
 
-import projects from "./projects.js";
+import showProject from "./projects-render.js";
 
-let projectIndex = 0;
-const buttonsNavigation = document.querySelectorAll(".project-buttons button");
+const radios = document.getElementsByTagName("input");
 
-document.querySelector("#email").addEventListener("click", () => {
-    navigator.clipboard.writeText("iglioliveira87@outlook.com");
-    alert("E-mail copiado com sucesso!");
-});
 
-document.querySelector("#discord").addEventListener("click", () => {
-    navigator.clipboard.writeText("Isnoglis#0560");
-    alert("Discord copiado com sucesso!");
-});
-
-function showProject(index) {
-    document.querySelector(".project-image img").src = projects[index].img;
-    document.querySelector(".project-info h2").textContent = projects[index].title;
-    document.querySelector(".project-info a").href = projects[index].url_online;
-};
-
-function next() {
-    if (projectIndex == projects.length - 1) {
-        projectIndex = 0;
-    } else {
-        projectIndex++;
+function renderSection() {
+    if (radios[0].checked) {
+        document.querySelector("#home").style.display = "flex";
+        document.querySelector("#about").style.display = "none";
+        document.querySelector("#projects").style.display = "none";
+        document.querySelector("#contact").style.display = "none";
+        document.getElementsByTagName("label")[0].style.textDecoration = "underline";
+        document.getElementsByTagName("label")[1].style.textDecoration = "none";
+        document.getElementsByTagName("label")[2].style.textDecoration = "none";
+        document.getElementsByTagName("label")[3].style.textDecoration = "none";
+    } else if (radios[1].checked) {
+        document.querySelector("#home").style.display = "none";
+        document.querySelector("#about").style.display = "flex";
+        document.querySelector("#projects").style.display = "none";
+        document.querySelector("#contact").style.display = "none";
+        document.getElementsByTagName("label")[0].style.textDecoration = "none";
+        document.getElementsByTagName("label")[1].style.textDecoration = "underline";
+        document.getElementsByTagName("label")[2].style.textDecoration = "none";
+        document.getElementsByTagName("label")[3].style.textDecoration = "none";
+    } else if (radios[2].checked) {
+        document.querySelector("#home").style.display = "none";
+        document.querySelector("#about").style.display = "none";
+        document.querySelector("#projects").style.display = "flex";
+        document.querySelector("#contact").style.display = "none";
+        document.getElementsByTagName("label")[0].style.textDecoration = "none";
+        document.getElementsByTagName("label")[1].style.textDecoration = "none";
+        document.getElementsByTagName("label")[2].style.textDecoration = "underline";
+        document.getElementsByTagName("label")[3].style.textDecoration = "none";
+        showProject();
+    } else if (radios[3].checked) {
+        document.querySelector("#home").style.display = "none";
+        document.querySelector("#about").style.display = "none";
+        document.querySelector("#projects").style.display = "none";
+        document.querySelector("#contact").style.display = "flex";
+        document.getElementsByTagName("label")[0].style.textDecoration = "none";
+        document.getElementsByTagName("label")[1].style.textDecoration = "none";
+        document.getElementsByTagName("label")[2].style.textDecoration = "none";
+        document.getElementsByTagName("label")[3].style.textDecoration = "underline";
     }
 }
 
-function back() {
-    if (projectIndex == 0) {
-        projectIndex = projects.length - 1;
-    } else {
-        projectIndex--;
-    }
-}
-
-buttonsNavigation[0].addEventListener("click", () => {
-    back();
-    showProject(projectIndex);
+radios[0].addEventListener("click", () => {
+    radios[0].checked = true;
+    renderSection();
 });
 
-buttonsNavigation[1].addEventListener("click", () => {
-    next();
-    showProject(projectIndex);
+radios[1].addEventListener("click", () => {
+    radios[1].checked = true;
+    renderSection();
 });
-
-window.onload = showProject(projectIndex);
+radios[2].addEventListener("click", () => {
+    radios[2].checked = true;
+    renderSection();
+});
+radios[3].addEventListener("click", () => {
+    radios[3].checked = true;
+    renderSection();
+});

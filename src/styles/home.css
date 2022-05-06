@@ -1,0 +1,41 @@
+#home {
+    display: flex;
+}
+
+.container-home-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-home-left h2:first-child {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    align-self: flex-start;
+    margin-left: 100px;
+}
+
+.container-home-left h1 {
+    font-size: 4rem;
+}
+
+.container-home-left h2:last-child {
+    font-size: 3rem;
+    align-self: flex-end;
+    margin-right: 100px;
+}
+
+.container-home-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+.container-home-right .image {
+    height: 70%;
+}
