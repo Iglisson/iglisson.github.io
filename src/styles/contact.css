@@ -1,4 +1,52 @@
 #contact {
-    background-color: yellow;
     display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact div {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    flex-flow: column wrap;
+}
+
+#contact h3 {
+    font-size: 3rem;
+}
+
+#contact ul {
+    list-style: none;
+    font-size: 1.75rem;
+}
+
+#contact ul li {
+    margin-bottom: 20px;
+}
+
+#contact ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#contact ul li a:hover{
+    transition: all 0.4s;
+    color: var(--primary-color);
+}
+
+#contact ul li button{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+#contact ul li button:hover{
+    transition: all 0.4s;
+    color: var(--secondary-color);
 }

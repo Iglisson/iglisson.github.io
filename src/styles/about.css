@@ -1,4 +1,45 @@
 #about {
-    background-color: green;
     display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .about-left {
+    width: 44%;
+    height: 90%;
+    text-align: justify;
+    margin-right: 1%;
+}
+
+#about .about-left h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#about .about-left p {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+#about .about-right {
+    width: 44%;
+    height: 90%;
+    margin-left: 1%;
+}
+
+#about .about-right h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#about .about-right ul {
+    list-style: none;
+    font-size: 1.25rem;
+    margin-left: 50px;
+}
+
+#about .about-right ul li {
+    margin-bottom: 10px;
 }

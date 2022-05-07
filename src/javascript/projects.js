@@ -1,28 +1,33 @@
-const projects =[
+const projects = [
     {
-        "img": "./src/images/projects/stopwatch.png",
         "title": "Stopwatch",
-        "url_online": "https://iglisson.github.io/stopwatch/"
+        "url_online": "https://iglisson.github.io/stopwatch/",
+        "repository": "https://github.com/Iglisson/stopwatch/",
+        "tools": ["fab fa-js", "fab fa-html5", "fab fa-css3"]
     },
     {
-        "img": "./src/images/projects/guessing-game.png",
         "title": "Guessing Game",
-        "url_online": "https://iglisson.github.io/guessing-game-js/"
+        "url_online": "https://iglisson.github.io/guessing-game-js/",
+        "repository": "https://github.com/Iglisson/guessing-game-js/",
+        "tools": ["fab fa-js", "fab fa-html5", "fab fa-css3"]
     },
     {
-        "img": "./src/images/projects/tip-calculator.png",
         "title": "Tip Calculator",
-        "url_online": "https://iglisson.github.io/tip-calculator-js/"
+        "url_online": "https://iglisson.github.io/tip-calculator-js/",
+        "repository": "https://github.com/Iglisson/tip-calculator-js/",
+        "tools": ["fab fa-js", "fab fa-html5", "fab fa-css3"]
     },
     {
-        "img": "./src/images/projects/clone-prime-video.png",
         "title": "Clone Prime Video",
-        "url_online": "https://iglisson.github.io/clone-prime-video/"
+        "url_online": "https://iglisson.github.io/clone-prime-video/",
+        "repository": "https://github.com/Iglisson/clone-prime-video/",
+        "tools": ["fab fa-js", "fab fa-html5", "fab fa-css3"]
     },
     {
-        "img": "./src/images/projects/todo-list.png",
         "title": "To Do List",
-        "url_online": "https://iglisson.github.io/todo-list/"
+        "url_online": "https://iglisson.github.io/todo-list/",
+        "repository": "https://github.com/Iglisson/todo-list/",
+        "tools": ["fab fa-js", "fab fa-html5", "fab fa-css3"]
     }
 ]
 
