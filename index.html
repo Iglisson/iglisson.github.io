@@ -22,118 +22,114 @@
 
     <div class="container">
 
-        <div class="container-contents">
-
-            <div class="container-header">
-                <div class="container-header-subtitle">
-                    <h2>Front-End Developer</h2>
-                </div>
-
-                <div class="container-header-nav">
-                    <label for="radioHome">Home</label>
-                    <input type="radio" name="section" id="radioHome" checked>
-
-                    <label for="radioAbout">About</label>
-                    <input type="radio" name="section" id="radioAbout">
-
-                    <label for="radioProjects">Projects</label>
-                    <input type="radio" name="section" id="radioProjects">
-
-                    <label for="radioContact">Contact</label>
-                    <input type="radio" name="section" id="radioContact">
-                </div>
+        <header>
+            <div class="header-subtitle">
+                <h2>Front-End Developer</h2>
             </div>
 
-            <div id="home" class="container-main">
+            <nav>
+                <label for="radioHome">Home</label>
+                <input type="radio" name="section" id="radioHome" checked>
 
-                <div class="container-home-left">
-                    <h2>&#128075;Hi, i'm</h2>
-                    <h1>Iglisson Ruan</h1>
-                </div>
+                <label for="radioAbout">About</label>
+                <input type="radio" name="section" id="radioAbout">
 
-                <div class="container-home-right">
-                    <!-- <img class="image" src="./src/images/photo-personal.png" alt="Photo Personal"> -->
-                </div>
+                <label for="radioProjects">Projects</label>
+                <input type="radio" name="section" id="radioProjects">
 
+                <label for="radioContact">Contact</label>
+                <input type="radio" name="section" id="radioContact">
+            </nav>
+        </header>
+
+        <section id="home">
+
+            <div class="container-home-left">
+                <h2>&#128075;Hi, i'm</h2>
+                <h1>Iglisson Ruan</h1>
             </div>
 
-            <div id="about" class="container-main">
-
-                <div class="about-left">
-
-                    <h2>About me</h2>
-
-                    <p>
-                        I'm a Web Developer Brazilian interested in Front-End Development, design and open source.
-                    </p>
-
-                    <p>
-                        I'm focused on building products with JavaScript, specifically React and React-Native.
-                    </p>
-
-                    <p>
-                        Student of Technology in Systems Analysis and Development in the 6th semester at UEPA in
-                        Castanhal
-                    </p>
-
-                </div>
-
-                <div class="about-right">
-                    <h2>Languages and technologies</h2>
-
-                    <ul>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>React</li>
-                        <li>React Native</li>
-                        <li>NodeJs</li>
-                        <li>SQL and NoSQL</li>
-                        <li>Git and Github</li>
-                    </ul>
-                </div>
+            <div class="container-home-right">
+                <!-- <img class="image" src="./src/images/photo-personal.png" alt="Photo Personal"> -->
             </div>
 
-            <div id="projects" class="container-main">
+        </section>
 
-                <div class="projects-list">
-                    <ul>
-                    </ul>
-                </div>
+        <section id="about">
+
+            <div class="about-left">
+
+                <h2>About me</h2>
+
+                <p>
+                    I'm a Web Developer Brazilian interested in Front-End Development, design and open source.
+                </p>
+
+                <p>
+                    I'm focused on building products with JavaScript, specifically React and React-Native.
+                </p>
+
+                <p>
+                    Student of Technology in Systems Analysis and Development in the 6th semester at UEPA in
+                    Castanhal
+                </p>
 
             </div>
 
-            <div id="contact" class="container-main">
+            <div class="about-right">
+                <h2>Languages and technologies</h2>
 
-                <div>
-                    <h3>Contacts</h3>
-                    <ul>
-                        <li>
-                            <button id="btnLinkedin"><i class="fas fa-copy"></i></button>
-                            <a href="https://www.linkedin.com/in/iglisson-ruan/">LinkedIn</a>
-                        </li>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>React</li>
+                    <li>React Native</li>
+                    <li>NodeJs</li>
+                    <li>SQL and NoSQL</li>
+                    <li>Git and Github</li>
+                </ul>
+            </div>
+        </section>
 
-                        <li>
-                            <button id="btnEmail"><i class="fas fa-copy"></i></button>
-                            E-mail
-                        </li>
+        <section id="projects">
 
-                        <li>
-                            <button id="btnDiscord"><i class="fas fa-copy"></i></button>
-                            Discord
-                        </li>
-
-                        <li>
-                            <button id="btnGithub"><i class="fas fa-copy"></i></button>
-                            <a href="https://github.com/Iglisson">Github</a>
-                        </li>
-                    </ul>
-                </div>
-
+            <div class="projects-list">
+                <ul>
+                </ul>
             </div>
 
-        </div>
+        </section>
 
-        <script type="module" src="./src/javascript/index.js"></script>
+        <section id="contact">
+
+            <div>
+                <h3>Contacts</h3>
+                <ul>
+                    <li>
+                        <button id="btnLinkedin"><i class="fas fa-copy"></i></button>
+                        <a href="https://www.linkedin.com/in/iglisson-ruan/">LinkedIn</a>
+                    </li>
+
+                    <li>
+                        <button id="btnEmail"><i class="fas fa-copy"></i></button>
+                        E-mail
+                    </li>
+
+                    <li>
+                        <button id="btnDiscord"><i class="fas fa-copy"></i></button>
+                        Discord
+                    </li>
+
+                    <li>
+                        <button id="btnGithub"><i class="fas fa-copy"></i></button>
+                        <a href="https://github.com/Iglisson">Github</a>
+                    </li>
+                </ul>
+        </section>
+
+    </div>
+
+    <script type="module" src="./src/javascript/index.js"></script>
 
 </body>
 

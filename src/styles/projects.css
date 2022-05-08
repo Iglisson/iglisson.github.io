@@ -19,8 +19,8 @@
     font-size: 1.25rem;
     display: flex;
     align-items: flex-start;
-    justify-content: start;
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: row wrap;
 }
 
 #projects .projects-list ul li {
